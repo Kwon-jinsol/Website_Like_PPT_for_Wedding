@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨딩 슬라이드</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- 슬라이드 1 -->
+        <div class="slide active">
+            <div class="background-video">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="lyrics-container">
+                <h1 class="lyrics-title">우리의 시작</h1>
+                <p class="lyrics-text">
+                    처음 만난 그날의 기억이<br>
+                    아직도 내 마음에 남아있어<br>
+                    너의 미소가 내게 다가왔을 때<br>
+                    세상이 멈춘 것 같았어
+                </p>
+            </div>
+        </div>
+
+        <!-- 슬라이드 2 -->
+        <div class="slide">
+            <div class="background-video">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="lyrics-container">
+                <h1 class="lyrics-title">함께한 날들</h1>
+                <p class="lyrics-text">
+                    봄날의 벚꽃 아래서<br>
+                    여름밤 별을 보며<br>
+                    가을 단풍길을 걸으며<br>
+                    겨울 눈 속에서도 함께였어
+                </p>
+            </div>
+        </div>
+
+        <!-- 슬라이드 3 -->
+        <div class="slide">
+            <div class="background-video">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="lyrics-container">
+                <h1 class="lyrics-title">영원한 약속</h1>
+                <p class="lyrics-text">
+                    이제 우리 하나가 되어<br>
+                    평생을 함께 걸어가려 해<br>
+                    기쁠 때나 슬플 때나<br>
+                    서로의 손을 놓지 않을게
+                </p>
+            </div>
+        </div>
+
+        <!-- GIF 배경 슬라이드 예시 -->
+        <div class="slide">
+            <div class="background-gif" style="background-image: url('images/background1.gif')"></div>
+            <div class="lyrics-container">
+                <h1 class="lyrics-title">사랑해</h1>
+                <p class="lyrics-text">
+                    너와 함께라면<br>
+                    어떤 길도 두렵지 않아<br>
+                    우리의 사랑이<br>
+                    영원히 빛나길
+                </p>
+            </div>
+        </div>
+
+        <!-- 네비게이션 화살표 -->
+        <button class="nav-arrow prev" onclick="changeSlide(-1)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="changeSlide(1)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+
+        <!-- 슬라이드 인디케이터 -->
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

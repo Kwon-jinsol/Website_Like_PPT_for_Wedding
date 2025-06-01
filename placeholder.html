@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨딩 슬라이드 (플레이스홀더)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 플레이스홀더용 그라디언트 배경 */
+        .placeholder-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        .bg-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .bg-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .bg-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .bg-4 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        @keyframes gradientAnimation {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+        
+        /* 플로팅 하트 애니메이션 */
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 40px;
+            animation: float 8s linear infinite;
+            opacity: 0.3;
+            transform-origin: center;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- 슬라이드 1 -->
+        <div class="slide active">
+            <div class="placeholder-bg bg-1"></div>
+            <div class="floating-hearts">
+                <span class="heart" style="left: 7%; animation-delay: 0s; font-size: 35px;">❤️</span>
+                <span class="heart" style="left: 23%; animation-delay: 1s; font-size: 45px;">💕</span>
+                <span class="heart" style="left: 41%; animation-delay: 2s; font-size: 38px;">💖</span>
+                <span class="heart" style="left: 58%; animation-delay: 3s; font-size: 42px;">💗</span>
+                <span class="heart" style="left: 72%; animation-delay: 4s; font-size: 36px;">💝</span>
+                <span class="heart" style="left: 89%; animation-delay: 5s; font-size: 44px;">💞</span>
+                <span class="heart" style="left: 15%; animation-delay: 6s; font-size: 39px;">💓</span>
+                <span class="heart" style="left: 33%; animation-delay: 7s; font-size: 41px;">💖</span>
+                <span class="heart" style="left: 67%; animation-delay: 0.5s; font-size: 37px;">💕</span>
+                <span class="heart" style="left: 85%; animation-delay: 1.5s; font-size: 43px;">❤️</span>
+                <span class="heart" style="left: 12%; animation-delay: 2.5s; font-size: 44px;">💞</span>
+                <span class="heart" style="left: 28%; animation-delay: 3.5s; font-size: 36px;">❤️</span>
+                <span class="heart" style="left: 45%; animation-delay: 4.5s; font-size: 42px;">💓</span>
+                <span class="heart" style="left: 63%; animation-delay: 5.5s; font-size: 38px;">💖</span>
+                <span class="heart" style="left: 79%; animation-delay: 6.5s; font-size: 40px;">💕</span>
+            </div>
+            <div class="lyrics-container">
+                <!-- <h1 class="lyrics-title">우리의 시작</h1> -->
+                <p class="lyrics-text">
+                    내 영혼의 그윽히 깊은데서<br>
+                    맑은 가락이 울려나네<br>
+                    하늘 곡조가 언제나 흘러나와<br>
+                    두 사람을 고이싸네
+                </p>
+            </div>
+        </div>
+
+        <!-- 슬라이드 2 -->
+        <div class="slide">
+            <div class="placeholder-bg bg-2"></div>
+            <div class="floating-hearts">
+                <span class="heart" style="left: 12%; animation-delay: 0s; font-size: 44px;">💞</span>
+                <span class="heart" style="left: 28%; animation-delay: 1s; font-size: 36px;">❤️</span>
+                <span class="heart" style="left: 45%; animation-delay: 2s; font-size: 42px;">💓</span>
+                <span class="heart" style="left: 63%; animation-delay: 3s; font-size: 38px;">💖</span>
+                <span class="heart" style="left: 79%; animation-delay: 4s; font-size: 40px;">💕</span>
+                <span class="heart" style="left: 92%; animation-delay: 5s; font-size: 37px;">💗</span>
+                <span class="heart" style="left: 8%; animation-delay: 6s; font-size: 43px;">💝</span>
+                <span class="heart" style="left: 37%; animation-delay: 7s; font-size: 39px;">💖</span>
+                <span class="heart" style="left: 54%; animation-delay: 0.5s; font-size: 41px;">💕</span>
+                <span class="heart" style="left: 71%; animation-delay: 1.5s; font-size: 36px;">❤️</span>
+            </div>
+            <div class="lyrics-container">
+                <!-- <h1 class="lyrics-title">함께한 날들</h1> -->
+                <p class="lyrics-text">
+                    평화 평화로다<br>
+                    하늘 위에서 내려오네<br>
+                    그 사랑의 물결이 영원토록<br>
+                    두 사람을 덮으소서
+                </p>
+            </div>
+        </div>
+
+        <!-- 슬라이드 3 -->
+        <div class="slide">
+            <div class="placeholder-bg bg-3"></div>
+            <div class="floating-hearts">
+                <span class="heart" style="left: 9%; animation-delay: 0s; font-size: 41px;">💕</span>
+                <span class="heart" style="left: 31%; animation-delay: 1s; font-size: 37px;">💗</span>
+                <span class="heart" style="left: 47%; animation-delay: 2s; font-size: 43px;">❤️</span>
+                <span class="heart" style="left: 65%; animation-delay: 3s; font-size: 39px;">💝</span>
+                <span class="heart" style="left: 83%; animation-delay: 4s; font-size: 42px;">💖</span>
+                <span class="heart" style="left: 19%; animation-delay: 5s; font-size: 36px;">💕</span>
+                <span class="heart" style="left: 42%; animation-delay: 6s; font-size: 44px;">💓</span>
+                <span class="heart" style="left: 58%; animation-delay: 7s; font-size: 38px;">💗</span>
+                <span class="heart" style="left: 76%; animation-delay: 0.5s; font-size: 40px;">❤️</span>
+                <span class="heart" style="left: 91%; animation-delay: 1.5s; font-size: 37px;">💖</span>
+            </div>
+            <div class="lyrics-container">
+                <!-- <h1 class="lyrics-title">영원한 약속</h1> -->
+                <p class="lyrics-text">
+                    사랑의 주님이 널 사랑하시네<br>
+                    네 모습 이대로 받으셨네<br>
+                    사랑의 주님이 널 사랑하듯이 <br>
+                    나도 널 사랑하며 축복해
+                </p>
+            </div>
+        </div>
+
+        <!-- 슬라이드 4 -->
+        <div class="slide">
+            <div class="placeholder-bg bg-4"></div>
+            <div class="floating-hearts">
+                <span class="heart" style="left: 11%; animation-delay: 0s; font-size: 39px;">💞</span>
+                <span class="heart" style="left: 27%; animation-delay: 1s; font-size: 43px;">💓</span>
+                <span class="heart" style="left: 44%; animation-delay: 2s; font-size: 37px;">❤️</span>
+                <span class="heart" style="left: 61%; animation-delay: 3s; font-size: 41px;">💕</span>
+                <span class="heart" style="left: 78%; animation-delay: 4s; font-size: 38px;">💗</span>
+                <span class="heart" style="left: 93%; animation-delay: 5s; font-size: 42px;">💝</span>
+                <span class="heart" style="left: 16%; animation-delay: 6s; font-size: 36px;">💖</span>
+                <span class="heart" style="left: 35%; animation-delay: 7s; font-size: 40px;">💕</span>
+                <span class="heart" style="left: 52%; animation-delay: 0.5s; font-size: 44px;">❤️</span>
+                <span class="heart" style="left: 69%; animation-delay: 1.5s; font-size: 37px;">💗</span>
+            </div>
+            <div class="lyrics-container">
+                <!-- <h1 class="lyrics-title">사랑해</h1> -->
+                <p class="lyrics-text">
+                    평화 평화로다<br>
+                    하늘 위에서 내려오네<br>
+                    그 사랑의 물결이 영원토록<br>
+                    두 사람을 덮으소서
+                </p>
+            </div>
+        </div>
+
+        <!-- 네비게이션 화살표 -->
+        <button class="nav-arrow prev" onclick="changeSlide(-1)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="changeSlide(1)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+
+        <!-- 슬라이드 인디케이터 -->
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // 페이지 로드 시 하트들의 초기 위치를 랜덤하게 설정
+        document.addEventListener('DOMContentLoaded', function() {
+            const hearts = document.querySelectorAll('.heart');
+            hearts.forEach(heart => {
+                // 랜덤한 초기 위치 설정 (화면 아래에서 시작)
+                const randomY = Math.random() * 100; // 0~100 사이의 랜덤값
+                heart.style.transform = `translateY(calc(100vh + ${randomY}px))`;
+            });
+        });
+    </script>
+</body>
+</html> 
